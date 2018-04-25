@@ -1,0 +1,16 @@
+<ul class="list-group">
+  <li class="list-group-item">{{Character[0]}}</li>
+  <li class="list-group-item">{{Character[1]}}</li>
+  <li class="list-group-item">{{Character[2]}}</li>
+  <li class="list-group-item">{{Character[3]}}</li>
+</ul>
+<hr>
+<button class="btn btn-primary" type="button" (click)="switchFirstAndLastName()" name="button">Switch Names</button>
+<button class="btn btn-danger" type="button" [disabled] = 'stopSwitchStatus' (click)="stopSeitchFirstAndLast()" name="button">Stop</button>
+<hr>
+<input type="text" [value]="twoWayData" name="" value="">
+<hr>
+<div>
+  <input type="text" [(ngModel)]="twoWayData" [value]="twoWayData" name="" value="">
+  {{twoWayData}}
+</div>
