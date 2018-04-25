@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 
 @Component({
   selector: 'app-twoway',
@@ -13,6 +13,8 @@ export class TwowayComponent implements OnInit {
   stopSwitch: any;
   stopSwitchStatus = true;
   twoWayData = 'Tyrion';
+
+  @Input() imageUrlChild: string;
 
   stopSeitchFirstAndLast() {
     clearInterval(this.stopSwitch);
@@ -38,6 +40,7 @@ export class TwowayComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log(this.imageUrlChild);
   }
 
 }
